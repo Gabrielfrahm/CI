@@ -13,5 +13,7 @@ jobs:
       - uses: oven-sh/setup-bun@v1
       - name: Instalação de dependências
         run: bun install
+      - name: Rodando os Testes
+        run: bun test
       - name: Build
         run: bun build index.ts
