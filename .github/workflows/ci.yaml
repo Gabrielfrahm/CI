@@ -9,9 +9,8 @@ jobs:
   CI:
     runs-on: ubuntu-latest
     steps:
-    - uses: oven-sh/setup-bun@v1
-        with:
-          version: 0.7.0 # or "canary"
+      - uses: actions/checkout@v3
+      - uses: oven-sh/setup-bun@v1
       - name: Instalação de dependências
         run: bun install
       - name: Build
