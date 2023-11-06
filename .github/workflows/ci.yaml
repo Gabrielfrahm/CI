@@ -6,9 +6,12 @@ on:
       - main
 
 jobs:
-  build:
+  CI:
     runs-on: ubuntu-latest
     steps:
+    - uses: oven-sh/setup-bun@v1
+        with:
+          version: 0.7.0 # or "canary"
       - name: Instalação de dependências
         run: bun install
       - name: Build
